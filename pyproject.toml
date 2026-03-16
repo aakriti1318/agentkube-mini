@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "agentkube-mini"
-version = "0.1.0"
+version = "0.1.1"
 description = "A tiny agent orchestration engine: task DAG + scheduler + events in ~400 lines"
 readme = "README.md"
 requires-python = ">=3.10"
