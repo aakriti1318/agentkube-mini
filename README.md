@@ -1,7 +1,7 @@
 # AgentKube-Mini
 
 <p align="center">
-  <img src="agentkube-mini-banner.png" alt="AgentKube-Mini"/>
+  <img src="https://raw.githubusercontent.com/aakriti1318/agentkube-mini/main/agentkube-mini-banner.png" alt="AgentKube-Mini"/>
 </p>
 
 A tiny agent orchestration engine. Implements a task DAG, dependency-aware parallel scheduler, and event system for multi-agent pipelines — all in about 400 lines of Python with zero dependencies. The idea is to show how agent orchestration *actually works* under the hood. 
