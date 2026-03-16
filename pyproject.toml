@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
 authors = [
-    {name = "AgentKube Contributors"}
+    {name = "Aakriti Aggarwal", email = "aakritiaggarwal@gmail.com"}
 ]
 keywords = ["agent", "orchestration", "dag", "scheduler", "multi-agent", "education"]
 classifiers = [
@@ -28,10 +28,10 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Homepage = "https://github.com/yourusername/agentkube-mini"
-Documentation = "https://github.com/yourusername/agentkube-mini#readme"
-Repository = "https://github.com/yourusername/agentkube-mini"
-Issues = "https://github.com/yourusername/agentkube-mini/issues"
+Homepage = "https://github.com/aakriti1318/agentkube-mini"
+Documentation = "https://github.com/aakriti1318/agentkube-mini#readme"
+Repository = "https://github.com/aakriti1318/agentkube-mini"
+Issues = "https://github.com/aakriti1318/agentkube-mini/issues"
 
 [project.scripts]
 agentkube-demo = "example:main"
