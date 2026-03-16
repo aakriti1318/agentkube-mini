@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentkube-mini"
+version = "0.1.0"
+description = "A tiny agent orchestration engine: task DAG + scheduler + events in ~400 lines"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "AgentKube Contributors"}
+]
+keywords = ["agent", "orchestration", "dag", "scheduler", "multi-agent", "education"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: System :: Monitoring",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/yourusername/agentkube-mini"
+Documentation = "https://github.com/yourusername/agentkube-mini#readme"
+Repository = "https://github.com/yourusername/agentkube-mini"
+Issues = "https://github.com/yourusername/agentkube-mini/issues"
+
+[project.scripts]
+agentkube-demo = "example:main"
+agentkube-smoke = "smoke_test:main"
+
+[tool.setuptools]
+packages = ["agentkube_mini"]

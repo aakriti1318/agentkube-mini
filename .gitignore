@@ -1,0 +1,10 @@
+.codemeter/
+*.log
+*.tmp
+*.bak
+*.swp     
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
