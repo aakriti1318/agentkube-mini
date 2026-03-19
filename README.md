@@ -6,6 +6,44 @@
 
 A tiny agent orchestration engine. Implements a task DAG, dependency-aware parallel scheduler, and event system for multi-agent pipelines — all in about 400 lines of Python with zero dependencies. The idea is to show how agent orchestration *actually works* under the hood. 
 
+### What is AgentKube-Mini?
+
+**One-Line Truth:** AgentKube-Mini is not the most powerful — but it's one of the simplest and cleanest for task orchestration. It's for people who want to *see and understand* how multi-agent systems work, not hide complexity behind abstractions.
+
+**What it does:**
+- **Task DAG**: Define agents and their dependencies. The scheduler figures out parallelism.
+- **Parallel execution**: Independent tasks run concurrently. Dependent tasks wait intelligently.
+- **Event observability**: Every step emits events (start, complete, fail) for logging and debugging.
+- **Shared memory**: All agents write their outputs to a dict that downstream agents can access.
+
+**What it's NOT:**
+- Not a framework for tool-calling loops (use LangGraph, LangChain for that).
+- Not for human-in-the-loop interrupts or state persistence (LangGraph does this better).
+- Not for distributed execution or fault tolerance (add that yourself or use LangGraph's checkpointer).
+
+**When to use AgentKube-Mini:**
+- You have specialized agent services (music catalog lookup, invoice retrieval, etc.) and need to **orchestrate them** in a DAG.
+- You want to **see the code** — all 400 lines — and understand exactly what's happening.
+- You're building a **hybrid system**: wrap your LangGraph sub-agents and let AgentKube-Mini orchestrate the top-level flow (verify → load_memory → route_to_specialist → save_preferences).
+- You need **zero dependencies** and want something educational that actually ships.
+
+**When to use LangGraph instead:**
+- You need agentic loops (LLM → tools → observe → repeat).
+- You need human-in-the-loop with interrupts/resume.
+- You need to save/restore state across sessions.
+- You're fine with more complexity for more power.
+
+**The hybrid approach (recommended for real systems):**
+```
+Your LangGraph Agents (do the hard parts: tool-calling, reasoning, memory)
+                ↓
+        AgentKube-Mini DAG (orchestrate the pipeline)
+                ↓
+        Event log + shared memory (observe what happened)
+```
+
+See `hybrid_orchestration.py` for a full worked example of this pattern.
+
 ### Installation
 
 ```bash
