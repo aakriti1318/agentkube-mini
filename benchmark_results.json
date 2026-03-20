@@ -1,0 +1,54 @@
+{
+  "timestamp": "1773982498.248064",
+  "test_dataset": "5 queries",
+  "langgraph": {
+    "approach": "langgraph",
+    "queries_tested": 5,
+    "latency_metrics": {
+      "avg_ms": 50.0,
+      "min_ms": 50.0,
+      "max_ms": 50.01,
+      "stddev_ms": 0.0
+    },
+    "tokens_metrics": {
+      "total": 2925,
+      "avg_per_query": 585.0
+    },
+    "accuracy_metrics": {
+      "avg_accuracy": 0.95,
+      "routing_accuracy": 1.0
+    },
+    "api_calls": 25,
+    "cost_metrics": {
+      "total_gpt4_cents": 1.11,
+      "total_llama_cents": 0.185,
+      "avg_cost_per_query_gpt4_cents": 0.22,
+      "avg_cost_per_query_llama_cents": 0.037
+    }
+  },
+  "agentkube_mini": {
+    "approach": "agentkube_hybrid",
+    "queries_tested": 5,
+    "latency_metrics": {
+      "avg_ms": 30.0,
+      "min_ms": 30.0,
+      "max_ms": 30.0,
+      "stddev_ms": 0.0
+    },
+    "tokens_metrics": {
+      "total": 1500,
+      "avg_per_query": 300.0
+    },
+    "accuracy_metrics": {
+      "avg_accuracy": 0.92,
+      "routing_accuracy": 1.0
+    },
+    "api_calls": 7,
+    "cost_metrics": {
+      "total_gpt4_cents": 0.6,
+      "total_llama_cents": 0.1,
+      "avg_cost_per_query_gpt4_cents": 0.12,
+      "avg_cost_per_query_llama_cents": 0.02
+    }
+  }
+}
